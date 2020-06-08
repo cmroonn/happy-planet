@@ -1,47 +1,48 @@
 "use strict";
 
-$(document).ready(function () {
-  // Carousel settings 
-  $(".events__carousel").slick({
-    centerMode: true,
-    slidesToShow: 1,
-    variableWidth: true,
-    infinite: true,
-    arrows: false,
-    slidesToScroll: 1,
-    dots: true,
-    dotsClass: "carousel-dots"
-  });
-  $(".event-report__carousel").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    dotsClass: "carousel-dots"
-  });
-  $(".raising-money__carousel").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    dotsClass: "carousel-dots"
-  });
-  $(".sponsors__carousel").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    dotsClass: "carousel-dots"
-  });
-  $(".reporting__carousel").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    dotsClass: "carousel-dots"
-  }); // Hamburger settings
+document.addEventListener("DOMContentLoaded", function () {
+  // Functional for buttons in contacts-page
+  {
+    var allButtons = document.querySelectorAll(".contacts-page-content__block-button");
+    allButtons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        btn.parentElement.classList.toggle("active");
+      });
+    });
+  } // Gallery settings in report page 
 
-  $(".hamburger, .mob-menu-close").click(function () {
-    $(".mob-menu").toggleClass("active");
-  });
+  {
+    var tabs = document.querySelectorAll(".gallery__tabs li");
+    var galleries = document.querySelectorAll(".gallery__carousel");
+    galleries = Array.prototype.slice.call(galleries);
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function (e) {
+        tabs.forEach(function (el) {
+          return el.classList.remove("current");
+        }); // remove class "current" from all tabs
+
+        var target = e.target;
+        target.classList.add("current"); // add class "current" to target 
+
+        var gallery = galleries.filter(function (elem) {
+          return elem.dataset.gallery === target.outerText;
+        });
+        gallery = gallery[0]; // get gallery 
+
+        galleries.forEach(function (el) {
+          el.classList.remove("active");
+        });
+        gallery.classList.add("active");
+      });
+    });
+  } // FAQ settings on "Help page"
+
+  {
+    var allFaq = document.querySelectorAll(".faq-item");
+    allFaq.forEach(function (faq) {
+      faq.addEventListener("click", function (e) {
+        faq.classList.toggle("active");
+      });
+    });
+  }
 });
