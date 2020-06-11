@@ -191,6 +191,7 @@
   .subpage-main-screen__title {
     background: url(../img/circle.png) no-repeat;
     padding: 200px 150px;
+    width: 480px;
     background-position: center;
     position: absolute;
     top: 350px;
@@ -263,14 +264,6 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%; }
-  .gallery__carousel {
-    visibility: hidden;
-    opacity: 0;
-    display: none; }
-    .gallery__carousel.active {
-      visibility: visible;
-      opacity: 1;
-      display: block; }
   .about-page__info {
     display: -webkit-box;
     display: -webkit-flex;
@@ -469,6 +462,8 @@
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start; }
+  .our-projects__btn {
+    margin: unset; }
   .sponsors {
     position: relative; }
     .sponsors .arrow-right {
@@ -521,7 +516,9 @@
     max-width: 795px; }
   .popup-wrapper .popup-body {
     max-height: 730px;
-    padding: 60px 30px; } }
+    padding: 60px 30px; }
+  .event-signup .contact-form-row input {
+    width: 100%; } }
 
 @media screen and (max-width: 1360px) {
   .header__logo {
@@ -634,6 +631,12 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
+
+@media screen and (min-width: 768px) {
+  .breadcrumbs li {
+    font-size: 14px; }
+  .page-title {
+    font-size: 30px; } }
 
 @media screen and (min-width: 1920px) {
   .subpage-main-screen,

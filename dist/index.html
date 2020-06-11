@@ -11,7 +11,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -41,37 +40,37 @@
             <div class="container">
                 <ul class="header__menu">
                     <li>
-                        <a href="#">
+                        <a href="help.html">
                             Проекты
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="about.html">
                             О нас
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="help.html">
                             Спонсорам
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="heroes.html">
                             Стать героем
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="report.html">
                             Отчеты
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="contacts.html">
                             Контакты
                         </a>
                     </li>
@@ -1249,7 +1248,7 @@
         <!-- sponsors ends -->
 
 
-
+        <!-- reporting -->
         <section class="section reporting">
 
             <!-- Decoration-->
@@ -1444,6 +1443,11 @@
                             </div>
                         </div>
                     </div>
+
+
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination carousel-dots"></div>
                 </div>
                 <!-- Carousel ends -->
 
@@ -1460,7 +1464,7 @@
 
             </div>
         </section>
-
+        <!-- reporting ends -->
 
         <!-- Contacts -->
         <section class="section contacts">
@@ -1626,6 +1630,204 @@
 
     <!-- Modals -->
 
+
+    <!-- Popup with EVENT -->
+    <div class="popup-wrapper event-popup">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+
+            <div class="popup-body">
+                <div class="event-popup__preview">
+                    <img src="img/timati.jpg" alt="">
+                </div>
+
+                <div class="text-center event-popup__heading">
+                    <!-- TITLE -->
+                    <h5>
+                        Благотворительный концерт Тимати в Афимоле
+                    </h5>
+
+                    <!-- DATE -->
+                    <p class="color-gray">
+                        12.02.2020 г.
+                    </p>
+                </div>
+
+
+                <p class="color-gray">
+                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                    менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                    выступлений в домашних условиях.
+                </p>
+
+                <!-- Slider -->
+                <div class="swiper-container event-photos">
+                    <div class="swiper-wrapper">
+
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <div class="event-photos__item">
+                                <img src="img/pic3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <div class="event-photos__item">
+                                <img src="img/pic3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <div class="event-photos__item">
+                                <img src="img/pic3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <div class="event-photos__item">
+                                <img src="img/pic3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- slide -->
+                        <div class="swiper-slide">
+                            <div class="event-photos__item">
+                                <img src="img/pic3.jpg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination carousel-dots"></div>
+                </div>
+
+                <p class="color-gray">
+                    Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                    менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                    выступлений в домашних условиях.
+                </p>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Записаться на мероприятие
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Записаться
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Записаться»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with consult form -->
+    <div class="popup-wrapper consult-popup">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+
+            <div class="popup-body">
+
+                <h5 class="text-center"> 
+                    Получить консультацию
+                </h5>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="contact-form-row">
+                            <input type="text" placeholder="Имя" name="name">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="text" placeholder="Телефон" name="tel">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <textarea name="about" placeholder="Вопрос" resize="off"></textarea>
+                        </div>
+
+                        <p class="contact-form-privacy color-gray text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+
+                            <button type="button" id="callPrivacy" class="color-purple">
+                                «Политики конфиденциальности»
+                            </button>
+                        </p>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+                        
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Thanks Popup -->
+    <div class="popup-wrapper thanks-popup">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303px" height="296px"
+            class="popup-decor">
+            <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                d="M11.670,45.535 L268.141,19.118 C279.228,17.976 286.052,29.227 283.327,43.834 L238.717,282.984 C237.273,290.723 229.927,296.465 222.345,295.971 L38.227,284.009 C32.322,283.626 26.876,277.854 26.004,270.990 L0.280,68.564 C-1.218,56.778 3.830,46.344 11.670,45.535 Z" />
+            <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                d="M30.738,26.516 L287.209,0.097 C298.296,-1.044 305.120,10.207 302.395,24.814 L257.785,263.965 C256.341,271.703 248.996,277.444 241.413,276.952 L57.295,264.990 C51.390,264.606 45.944,258.834 45.072,251.971 L19.348,49.544 C17.850,37.758 22.898,27.323 30.738,26.516 Z" />
+        </svg>
+
+        <p class="text-center">
+            Спасибо!
+            <span>
+                Ваше сообщние
+                отправлено
+            </span>
+        </p>
+    </div>
+
+
+    <!-- popup with information about privacy policy -->
     <div class="popup-wrapper" id="privacyPolicy">
 
         <div class="popup">

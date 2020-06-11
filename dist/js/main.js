@@ -1,7 +1,21 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Carousel Settings
+  // Close popup when click on overlay OR press "ESC"
+  var closePopup = function closePopup(popup) {
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.classList.remove("show");
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 27) {
+        popup.classList.remove("show");
+      }
+    });
+  }; // Carousel Settings
+
+
   {
     var foundersCarousel = new Swiper('.about-page__founders-carousel', {
       slidesPerView: 1,
@@ -20,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
           pagination: {
             el: null,
             clickable: true
+          },
+          navigation: {
+            nextEl: '.about-page__founders .arrow-right',
+            prevEl: '.about-page__founders .arrow-left'
           }
         }
       }
@@ -105,6 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     var reportingCarousel = new Swiper('.reporting__carousel', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
       breakpoints: {
         1170: {
           slidesPerView: 4,
@@ -140,6 +162,33 @@ document.addEventListener("DOMContentLoaded", function () {
           setTimeout(removeAnimation, 1000, document.querySelector(".about__people svg .blue"));
           document.querySelector(".about__people svg .purple").style.animation = "frameAnimate2 1s ease running";
           setTimeout(removeAnimation, 1000, document.querySelector(".about__people svg .purple"));
+        }
+      }
+    });
+    var eventPopupCarousel = new Swiper(".event-photos", {
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+    var galleryCarousel = new Swiper(".gallery__carousel .swiper-container", {
+      pagination: {
+        el: ".swiper-pagination"
+      },
+      breakpoints: {
+        1170: {
+          slidesPerColumn: 2,
+          slidesPerView: 3,
+          slidesPerColumnFill: "row",
+          spaceBetween: 30,
+          pagination: {
+            el: null
+          },
+          navigation: {
+            nextEl: '.arrow-right',
+            prevEl: '.arrow-left'
+          }
         }
       }
     });
@@ -197,6 +246,78 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       icon.addEventListener("mouseout", function (e) {
         icon.children[0].classList.toggle("show");
+      });
+    });
+  } // Popup with privacy policy settings
+
+  {
+    var _allButtons = document.querySelectorAll(".callPrivacy");
+
+    var popup = document.getElementById("privacyPolicy");
+    var submit = document.querySelector(".privacy-popup-submit");
+
+    _allButtons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        popup.classList.add("show");
+      });
+    });
+
+    submit.addEventListener("click", function (e) {
+      popup.classList.remove("show");
+    });
+    closePopup(popup);
+  } // Event popup 
+
+  {
+    var _popup = document.querySelector(".event-popup");
+
+    closePopup(_popup);
+  } // thanks popup 
+
+  {
+    var _popup2 = document.querySelector(".thanks-popup");
+
+    closePopup(_popup2);
+  } // consult popup 
+
+  {
+    var _popup3 = document.querySelector(".consult-popup");
+
+    closePopup(_popup3);
+  } // Make header fixed
+
+  {
+    var header = document.querySelector(".header");
+
+    if (window.innerWidth > 1170) {
+      window.addEventListener("scroll", function (e) {
+        console.log(window.pageYOffset);
+
+        if (window.pageYOffset > 200) {
+          header.classList.add("fixed");
+        } else {
+          header.classList.remove("fixed");
+        }
+      });
+    } else {
+      header = document.querySelector(".header-mob");
+      window.addEventListener("scroll", function (e) {
+        console.log(window.pageYOffset);
+
+        if (window.pageYOffset > 200) {
+          header.classList.add("fixed");
+        } else {
+          header.classList.remove("fixed");
+        }
+      });
+    }
+  }
+  {
+    var buttons = document.querySelectorAll(".hamburger, .mob-menu-close");
+    var menu = document.querySelector(".mob-menu");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        menu.classList.toggle("active");
       });
     });
   }
