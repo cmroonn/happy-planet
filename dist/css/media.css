@@ -518,7 +518,12 @@
     max-height: 730px;
     padding: 60px 30px; }
   .event-signup .contact-form-row input {
-    width: 100%; } }
+    width: 100%; }
+  .heroes-map_point {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
 
 @media screen and (max-width: 1360px) {
   .header__logo {
