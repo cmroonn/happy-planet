@@ -2,16 +2,24 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // Close popup when click on overlay OR press "ESC"
-  var closePopup = function closePopup(popup) {
-    popup.addEventListener("click", function (e) {
-      if (e.target === popup) {
-        popup.classList.remove("show");
-      }
+  var closePopup = function closePopup(popups) {
+    popups.forEach(function (popup) {
+      popup.addEventListener("click", function (e) {
+        if (e.target === popup) {
+          popup.classList.remove("show");
+        }
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.keyCode === 27) {
+          popup.classList.remove("show");
+        }
+      });
     });
-    document.addEventListener("keydown", function (e) {
-      if (e.keyCode === 27) {
-        popup.classList.remove("show");
-      }
+    var closeButtons = document.querySelectorAll(".popup .popup-close");
+    closeButtons.forEach(function (el) {
+      el.addEventListener("click", function () {
+        el.closest(".popup-wrapper").classList.remove("show");
+      });
     });
   }; // Carousel Settings
 
@@ -265,25 +273,12 @@ document.addEventListener("DOMContentLoaded", function () {
     submit.addEventListener("click", function (e) {
       popup.classList.remove("show");
     });
-    closePopup(popup);
-  } // Event popup 
+  } // Close popup
 
   {
-    var _popup = document.querySelector(".event-popup");
+    var _popup = document.querySelectorAll(".popup-wrapper");
 
     closePopup(_popup);
-  } // thanks popup 
-
-  {
-    var _popup2 = document.querySelector(".thanks-popup");
-
-    closePopup(_popup2);
-  } // consult popup 
-
-  {
-    var _popup3 = document.querySelector(".consult-popup");
-
-    closePopup(_popup3);
   } // Make header fixed
 
   {
@@ -291,8 +286,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (window.innerWidth > 1170) {
       window.addEventListener("scroll", function (e) {
-        console.log(window.pageYOffset);
-
         if (window.pageYOffset > 200) {
           header.classList.add("fixed");
         } else {
@@ -302,8 +295,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       header = document.querySelector(".header-mob");
       window.addEventListener("scroll", function (e) {
-        console.log(window.pageYOffset);
-
         if (window.pageYOffset > 200) {
           header.classList.add("fixed");
         } else {
