@@ -1926,10 +1926,12 @@ h2 {
   overflow-y: auto;
   overflow-x: hidden;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
   .popup-wrapper.show {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    display: block; }
   .popup-wrapper .popup {
     position: relative;
     top: 50%;
@@ -2255,6 +2257,9 @@ h2 {
 
 .popup-feedback .contact-form-submit {
   margin-top: 20px !important; }
+
+.help-stats .decoration-text {
+  display: none; }
 
 .help-stats__content {
   display: none; }
