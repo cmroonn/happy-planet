@@ -1,17 +1,20 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Close popup when click on overlay OR press "ESC"
+  var body = document.querySelector("body"); // Close popup when click on overlay OR press "ESC"
+
   var closePopup = function closePopup(popups) {
     popups.forEach(function (popup) {
       popup.addEventListener("click", function (e) {
         if (e.target === popup) {
           popup.classList.remove("show");
+          body.classList.remove("disabled");
         }
       });
       document.addEventListener("keydown", function (e) {
         if (e.keyCode === 27) {
           popup.classList.remove("show");
+          body.classList.remove("disabled");
         }
       });
     });
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButtons.forEach(function (el) {
       el.addEventListener("click", function () {
         el.closest(".popup-wrapper").classList.remove("show");
+        body.classList.remove("disabled");
       });
     });
   }; // Carousel Settings
@@ -34,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
         el: '.swiper-pagination',
         clickable: true
       },
+      updateOnWindowResize: true,
       breakpoints: {
         1170: {
           slidesPerView: 3,
-          loop: true,
           spaceBetween: 30,
           pagination: {
             el: null,
@@ -51,24 +55,50 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     var aboutGallery = new Swiper('.about-page__gallery', {
-      spaceBetween: 20,
-      slidesPerView: 1,
-      width: 174,
+      spaceBetween: 30,
+      slidesPerView: 2,
+      watchOverflow: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true
+      },
+      breakpoints: {
+        1170: {
+          slidesPerView: 3,
+          pagination: {
+            el: null,
+            clickable: true
+          },
+          navigation: {
+            nextEl: '.about-page__gallery-wrap .arrow-right',
+            prevEl: '.about-page__gallery-wrap .arrow-left'
+          }
+        }
       }
     });
 
     if (window.innerWidth < 1170) {
       var eventsCarousel = new Swiper('.events__carousel', {
-        width: 225,
-        centeredSlides: true,
-        loop: true,
         spaceBetween: 4,
+        slidesPerView: 2,
+        watchOverflow: true,
+        width: 450,
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
+        },
+        breakpoints: {
+          450: {
+            slidesPerView: 3,
+            width: 675,
+            centeredSlides: true
+          },
+          900: {
+            width: 900,
+            slidesPerView: 4,
+            centeredSlides: true
+          }
         }
       });
     }
@@ -80,6 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true
       },
       breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
         1170: {
           slidesPerView: 3,
           slidesPerGroup: 3,
@@ -98,7 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
         el: '.swiper-pagination',
         clickable: true
       },
+      spaceBetween: 30,
       breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
         1170: {
           slidesPerView: 3,
           pagination: {
@@ -132,13 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     var reportingCarousel = new Swiper('.reporting__carousel', {
       pagination: {
-        el: '.swiper-pagination',
+        el: '.carousel-dots',
         clickable: true
       },
+      spaceBetween: 20,
       breakpoints: {
         1170: {
           slidesPerView: 4,
-          spaceBetween: 20,
+          watchOverflow: true,
           pagination: {
             el: null
           },
@@ -147,6 +185,12 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: '.reporting .container .arrow-left'
           }
         }
+      }
+    });
+    var reportingImages = new Swiper('.reporting-images .swiper-container', {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
       }
     });
 
@@ -173,13 +217,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-    var eventPopupCarousel = new Swiper(".event-photos", {
-      centeredSlides: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
-    });
+
+    if (window.innerWidth < 1170) {
+      var eventPopupCarousel = new Swiper(".event-photos", {
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+    }
+
     var galleryCarousel = new Swiper(".gallery__carousel .swiper-container", {
       pagination: {
         el: ".swiper-pagination"
@@ -256,6 +304,19 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.children[0].classList.toggle("show");
       });
     });
+  } // Hover on category square
+
+  {
+    var _allIcons = document.querySelectorAll(".category-square");
+
+    _allIcons.forEach(function (icon) {
+      icon.addEventListener("mouseover", function (e) {
+        icon.children[0].classList.toggle("show");
+      });
+      icon.addEventListener("mouseout", function (e) {
+        icon.children[0].classList.toggle("show");
+      });
+    });
   } // Popup with privacy policy settings
 
   {
@@ -267,18 +328,48 @@ document.addEventListener("DOMContentLoaded", function () {
     _allButtons.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         popup.classList.add("show");
+        body.classList.add("disabled");
       });
     });
 
     submit.addEventListener("click", function (e) {
       popup.classList.remove("show");
+      body.classList.remove("disabled");
+    });
+  } // Popup with feedback settings
+
+  {
+    var _allButtons2 = document.querySelectorAll(".callFeedback");
+
+    var _popup = document.querySelector(".popup-feedback");
+
+    _allButtons2.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        _popup.classList.add("show");
+
+        body.classList.add("disabled");
+      });
+    });
+  } // Popup with privacy policy settings
+
+  {
+    var _allButtons3 = document.querySelectorAll(".callFeedback");
+
+    var _popup2 = document.querySelector(".popup-feedback");
+
+    _allButtons3.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        _popup2.classList.add("show");
+
+        body.classList.add("disabled");
+      });
     });
   } // Close popup
 
   {
-    var _popup = document.querySelectorAll(".popup-wrapper");
+    var _popup3 = document.querySelectorAll(".popup-wrapper");
 
-    closePopup(_popup);
+    closePopup(_popup3);
   } // Make header fixed
 
   {
@@ -309,7 +400,81 @@ document.addEventListener("DOMContentLoaded", function () {
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         menu.classList.toggle("active");
+        body.classList.toggle("disabled");
       });
+    });
+  } // Map on heroes page settings 
+
+  {
+    var points = document.querySelectorAll(".heroes-map_point");
+    points.forEach(function (point) {
+      point.addEventListener("mouseover", function () {
+        point.children[0].classList.add("show"); // show text
+      });
+      point.addEventListener("mouseout", function () {
+        point.children[0].classList.remove("show"); // hide text 
+      });
+    });
+  } // opening event popup settings 
+
+  {
+    var allEventCards = document.querySelectorAll(".events__item");
+    var allEventModals = document.querySelectorAll(".event-popup");
+    allEventCards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        var eventNum = card.getAttribute("data-event");
+        allEventModals.forEach(function (modal) {
+          var modalNum = modal.id;
+
+          if (eventNum === modalNum) {
+            modal.classList.add("show");
+            body.classList.add("disabled");
+          }
+        });
+      });
+    });
+  } // opening raising money popup settings 
+
+  {
+    var _allEventCards = document.querySelectorAll(".raising-money__item");
+
+    var _allEventModals = document.querySelectorAll(".raising-popup");
+
+    _allEventCards.forEach(function (card) {
+      var button = card.querySelector(".btn");
+      button.addEventListener("click", function () {
+        var eventNum = card.getAttribute("data-raising");
+
+        _allEventModals.forEach(function (modal) {
+          var modalNum = modal.id;
+
+          if (eventNum === modalNum) {
+            modal.classList.add("show");
+            body.classList.add("disabled");
+          }
+        });
+      });
+    });
+  } // write to founder
+
+  {
+    var btn = document.querySelector(".about__link");
+    var modal = document.getElementById("writeToFounder");
+    btn.addEventListener("click", function () {
+      modal.classList.add("show");
+      body.classList.add("disabled");
+    });
+  } // get consult
+
+  {
+    var _btn = document.getElementById("getConsult");
+
+    var _modal = document.getElementById("consultPopup");
+
+    _btn.addEventListener("click", function () {
+      _modal.classList.add("show");
+
+      body.classList.add("disabled");
     });
   }
 });
