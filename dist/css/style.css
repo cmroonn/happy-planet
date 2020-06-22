@@ -909,6 +909,8 @@ h2 {
     height: 39px;
     border: 2px solid white; }
     .raising-money__item-content-footer .btn:hover {
+      background: #cc0099; }
+    .raising-money__item-content-footer .btn:hover {
       background: white;
       color: #000; }
 
@@ -1140,6 +1142,8 @@ h2 {
   max-width: 300px;
   width: 100%;
   margin: auto; }
+  .our-projects__btn:hover {
+    background: #cc0099; }
 
 .our-projects__elems-wrapper {
   margin-bottom: 60px; }
@@ -1420,6 +1424,8 @@ h2 {
   height: 58px;
   cursor: pointer;
   display: none; }
+  .contacts-page__button:hover {
+    background: #cc0099; }
 
 .gallery {
   margin: 70px 0; }
@@ -1747,6 +1753,8 @@ h2 {
   background: #6c5ed2;
   width: 100%;
   margin-top: 60px !important; }
+  .contact-form-submit:hover {
+    background: #cc0099; }
 
 .heroes-form {
   margin-top: 130px; }
@@ -1997,6 +2005,8 @@ h2 {
         height: 38px;
         font-size: 12px;
         margin-top: 20px; }
+        .popup-wrapper .popup-body.privacy-popup .privacy-popup-submit:hover {
+          background: #cc0099; }
   .popup-wrapper .popup-body-wrap {
     padding: 15px; }
   .popup-wrapper .popup-decor {
@@ -2237,6 +2247,8 @@ h2 {
   max-width: unset;
   max-width: 280px;
   margin: 0 auto 50px; }
+  .raising-popup__btn:hover {
+    background: #cc0099; }
 
 .raising-popup .event-signup form {
   max-width: unset;
