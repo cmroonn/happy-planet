@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true
       },
       updateOnWindowResize: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
       breakpoints: {
         1170: {
           slidesPerView: 3,
@@ -61,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: {
         el: '.swiper-pagination',
         clickable: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
       },
       breakpoints: {
         1170: {
@@ -88,6 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
           el: '.swiper-pagination',
           clickable: true
         },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false
+        },
         breakpoints: {
           450: {
             slidesPerView: 3,
@@ -108,6 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: {
         el: '.swiper-pagination',
         clickable: true
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
       },
       breakpoints: {
         768: {
@@ -132,6 +148,10 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true
       },
       spaceBetween: 30,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
       breakpoints: {
         768: {
           slidesPerView: 2
@@ -154,6 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
         el: '.swiper-pagination',
         clickable: true
       },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: false
+      },
       breakpoints: {
         1170: {
           slidesPerView: 3,
@@ -173,6 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true
       },
       spaceBetween: 20,
+      keyboard: {
+        enabled: true
+      },
       breakpoints: {
         1170: {
           slidesPerView: 4,
@@ -191,7 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: {
         el: ".swiper-pagination",
         clickable: true
-      }
+      },
+      allowTouchMove: false
     });
 
     var removeAnimation = function removeAnimation(selector) {
@@ -455,26 +483,57 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     });
-  } // write to founder
+  } // write to founder modal window 
 
   {
     var btn = document.querySelector(".about__link");
     var modal = document.getElementById("writeToFounder");
-    btn.addEventListener("click", function () {
-      modal.classList.add("show");
-      body.classList.add("disabled");
-    });
-  } // get consult
+
+    if (btn) {
+      btn.addEventListener("click", function (e) {
+        modal.classList.add("show");
+        body.classList.add("disabled");
+      });
+    }
+  } // get consult modal window 
 
   {
     var _btn = document.getElementById("getConsult");
 
     var _modal = document.getElementById("consultPopup");
 
-    _btn.addEventListener("click", function () {
-      _modal.classList.add("show");
+    if (_btn) {
+      _btn.addEventListener("click", function () {
+        _modal.classList.add("show");
 
-      body.classList.add("disabled");
-    });
+        body.classList.add("disabled");
+      });
+    }
+  } // fix socials buttons 
+
+  {
+    if (window.innerWidth >= 1650) {
+      var socials = document.querySelector(".main-screen-socials");
+      var socialsTopPos = socials.clientHeight;
+      window.addEventListener("scroll", function (e) {
+        if (socialsTopPos <= window.pageYOffset) {
+          socials.classList.add("fixed");
+        } else {
+          socials.classList.remove("fixed");
+        }
+      });
+    }
+  } // Hide scrollbar
+
+  {
+    var calcScrollbarWidth = function calcScrollbarWidth() {
+      var documentWidth = parseInt(document.documentElement.clientWidth),
+          windowWidth = parseInt(window.innerWidth),
+          scrollbarWidth = windowWidth - documentWidth;
+      return scrollbarWidth;
+    };
+
+    var scrollbarWidth = calcScrollbarWidth();
+    document.body.style.paddingRight = scrollbarWidth + 'px';
   }
 });
