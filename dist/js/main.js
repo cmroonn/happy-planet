@@ -469,17 +469,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var _allEventModals = document.querySelectorAll(".raising-popup");
 
     _allEventCards.forEach(function (card) {
-      var button = card.querySelector(".btn");
-      button.addEventListener("click", function () {
-        var eventNum = card.getAttribute("data-raising");
+      var button = card.querySelectorAll(".btn, .openRisingMoney");
+      button.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var eventNum = card.getAttribute("data-raising");
 
-        _allEventModals.forEach(function (modal) {
-          var modalNum = modal.id;
+          _allEventModals.forEach(function (modal) {
+            var modalNum = modal.id;
 
-          if (eventNum === modalNum) {
-            modal.classList.add("show");
-            body.classList.add("disabled");
-          }
+            if (eventNum === modalNum) {
+              modal.classList.add("show");
+              body.classList.add("disabled");
+            }
+          });
         });
       });
     });
