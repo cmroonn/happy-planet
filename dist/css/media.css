@@ -1246,7 +1246,7 @@
     flex-direction: column;
     z-index: 1; }
     .project-main-screen__heading__title__video .video-icon {
-      margin-left: -40px; }
+      margin-left: -25px; }
   .project-main-screen__heading__title-mob {
     display: block;
     background: url(../img/bg_logo.svg) no-repeat;
