@@ -289,6 +289,10 @@ h2 {
   .arrow.arrow-right:hover .arrow-blue {
     top: -8px;
     left: 2px; }
+  .arrow.arrow-right:hover .blue {
+    -webkit-transform: translate(5px, 2px);
+    -ms-transform: translate(5px, 2px);
+    transform: translate(5px, 2px); }
   .arrow .arrow-purple {
     width: 35px;
     height: 68px;
@@ -333,6 +337,10 @@ h2 {
     left: -3px; }
     .arrow:hover .arrow-blue:before {
       opacity: .3; }
+  .arrow:hover .blue {
+    -webkit-transform: translate(-7px, 3px);
+    -ms-transform: translate(-7px, 3px);
+    transform: translate(-7px, 3px); }
 
 .main {
   overflow-x: hidden; }
@@ -1444,7 +1452,7 @@ h2 {
 .gallery__tabs {
   margin: 30px 0;
   overflow-x: auto;
-  width: 100%; }
+  min-width: 300px; }
   .gallery__tabs li {
     font-size: 14px;
     height: 25px;
