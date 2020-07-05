@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fonts/circe/circe.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
@@ -46,23 +46,33 @@
 
                         <ul class="header__menu-submenu">
                             <li>
-                                Час чистоты
+                                <a href="#">
+                                    Час чистоты
+                                </a>
                             </li>
 
                             <li>
-                                Подари внимание
+                                <a href="#">
+                                    Подари внимание
+                                </a>
                             </li>
 
                             <li>
-                                Свобода от долгов
+                                <a href="#">
+                                    Свобода от долгов
+                                </a>
                             </li>
 
                             <li>
-                                Кормление
+                                <a href="#">
+                                    Кормление
+                                </a>
                             </li>
 
                             <li>
-                                Школа супер-героев
+                                <a href="#">
+                                    Школа супер-героев
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -278,7 +288,7 @@
 
                     <div class="swiper-wrapper">
                         <!-- event -->
-                        <div class="swiper-slide events__item overlay-aqua"
+                        <div class="swiper-slide events__item openEvent overlay-aqua"
                             style="background-image: url('img/timati.jpg');" data-event="event-1">
                             <!-- Date -->
                             <div class="fw-bold events__item-date">
@@ -296,7 +306,7 @@
                         </div>
 
                         <!-- event -->
-                        <div class="swiper-slide events__item overlay-violet"
+                        <div class="swiper-slide events__item openEvent overlay-violet"
                             style="background-image: url('img/timati.jpg');" data-event="event-2">
                             <!-- Date -->
                             <div class="fw-bold events__item-date">
@@ -314,7 +324,7 @@
                         </div>
 
                         <!-- event -->
-                        <div class="swiper-slide events__item overlay-green"
+                        <div class="swiper-slide events__item openEvent overlay-green"
                             style="background-image: url('img/timati.jpg');" data-event="event-3">
                             <!-- Date -->
                             <div class="fw-bold events__item-date">
@@ -332,8 +342,7 @@
                         </div>
 
                         <!-- event -->
-                        <div class="swiper-slide events__item overlay-turquoise"
-                            style="background-image: url('img/timati.jpg');" data-event="event-4">
+                        <div class="swiper-slide events__item openEvent overlay-turquoise" style="background-image: url('img/timati.jpg');" data-event="event-4">
                             <!-- Date -->
                             <div class="fw-bold events__item-date">
                                 <span>
@@ -350,7 +359,7 @@
                         </div>
 
                         <!-- event -->
-                        <div class="swiper-slide events__item overlay-beige"
+                        <div class="swiper-slide events__item openEvent overlay-beige"
                             style="background-image: url('img/timati.jpg');" data-event="event-5">
                             <!-- Date -->
                             <div class="fw-bold events__item-date">
@@ -403,7 +412,7 @@
                     <div class="swiper-wrapper">
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-1">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -436,7 +445,7 @@
 
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-2">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -469,7 +478,7 @@
 
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-3">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -504,7 +513,7 @@
 
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-4">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -538,7 +547,7 @@
 
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-5">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -571,7 +580,7 @@
 
                         <!-- slide -->
                         <div class="swiper-slide">
-                            <div class="event-report__item">
+                            <div class="event-report__item" data-report="report-6">
                                 <!-- preview -->
                                 <div class="event-report__item-preview" style="background-image: url(img/pic.jpg)">
                                 </div>
@@ -1865,8 +1874,6 @@
                 <!-- Navigation -->
 
                 <div class="arrow arrow-left">
-                    <!-- <div class="arrow-purple"></div>
-                    <div class="arrow-blue"></div> -->
 
                     <svg width="49" height="76" viewBox="0 0 49 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M35.061 74.5426C37.3032 76.7548 41.0437 75.1469 41.0227 72.0405L40.5796 6.39559C40.5586 3.28918 36.7968 1.73199 34.5846 3.97426L1.98367 37.0183C0.644713 38.3761 0.659748 40.6033 2.01691 41.9423L35.061 74.5426Z" fill="#8B7FBD"/>
@@ -1876,8 +1883,6 @@
                 </div>
 
                 <div class="arrow arrow-right">
-                    <!-- <div class="arrow-purple"></div>
-                    <div class="arrow-blue"></div> -->
                     
                         <svg width="46" height="75" viewBox="0 0 46 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.2636 3.38724C9.03635 1.15995 5.28513 2.7425 5.28513 5.84898V71.4954C5.28513 74.6019 9.03635 76.1844 11.2636 73.9572L44.0869 41.1339C45.435 39.7853 45.435 37.558 44.0869 36.2099L11.2636 3.38724Z" fill="#8B7FBD"/>
@@ -2693,6 +2698,804 @@
 
                         <p class="text-center">
                             Нажимая кнопку «Записаться»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-1">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-2">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-3">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-4">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-5">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
+                            Вы соглашаетесь с условиями
+                            <span class="color-purple callPrivacy">
+                                «Политики конфиденциальности»
+                            </span>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup with REPORT -->
+    <div class="popup-wrapper report-popup" id="report-6">
+
+        <div class="popup">
+            <!-- decor -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="622px"
+                height="590px" class="popup-decor">
+                <path fill-rule="evenodd" fill="rgb(51, 153, 255)"
+                    d="M23.957,90.765 L550.440,38.107 C573.201,35.831 587.209,58.257 581.616,87.372 L490.039,564.058 C487.075,579.482 471.996,590.926 456.430,589.944 L78.473,566.101 C66.350,565.336 55.171,553.831 53.381,540.151 L0.574,136.666 C-2.501,113.174 7.862,92.374 23.957,90.765 Z" />
+                <path fill-rule="evenodd" opacity="0.502" fill="rgb(153, 51, 204)"
+                    d="M63.100,52.854 L589.583,0.196 C612.344,-2.081 626.352,20.346 620.759,49.461 L529.182,526.147 C526.218,541.572 511.139,553.014 495.573,552.034 L117.615,528.189 C105.493,527.424 94.314,515.920 92.524,502.240 L39.717,98.755 C36.642,75.262 47.005,54.463 63.100,52.854 Z" />
+            </svg>
+
+            <img src="img/close.png" alt="" class="popup-close">
+
+            <div class="popup-body">
+
+                <div class="popup-body-wrap">
+                    <div class="event-popup__preview">
+                        <img src="img/timati.jpg" alt="">
+                    </div>
+
+                    <div class="event-popup__preview event-popup__preview-desk">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+
+                    <div class="text-center event-popup__heading">
+                        <!-- TITLE -->
+                        <h5>
+                            Отчет "Кормление М. Кутузовская"
+                        </h5>
+
+                        <!-- DATE -->
+                        <p class="color-gray">
+                            12.02.2020 г.
+                        </p>
+                    </div>
+
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+
+                    <!-- Slider -->
+                    <div class="swiper-container event-photos">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide -->
+                            <div class="swiper-slide">
+                                <div class="event-photos__item">
+                                    <img src="img/pic3.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination carousel-dots"></div>
+                    </div>
+
+                    <p class="color-gray">
+                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+                        менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                        выступлений в домашних условиях.
+                    </p>
+                </div>
+
+                <div class="event-signup">
+                    <form method="POST">
+                        <h5 class="text-center">
+                            Возникли вопросы?
+                            <span>
+                                Заполните форму ниже и мы с вами свяжемся
+                            </span>
+                        </h5>
+
+                        <div class="contact-form-row">
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="contact-form-row">
+                            <input type="tel" name="tel" placeholder="Телефон">
+                        </div>
+
+                        <button type="submit" class="contact-form-submit">
+                            Отправить
+                        </button>
+
+                        <p class="text-center">
+                            Нажимая кнопку «Отправить»,
                             Вы соглашаетесь с условиями
                             <span class="color-purple callPrivacy">
                                 «Политики конфиденциальности»
@@ -3541,7 +4344,7 @@
     <!-- scripts -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
     <script src="js/main.js"></script>
 
 

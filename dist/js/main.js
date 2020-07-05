@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } // opening event popup settings 
 
   {
-    var allEventCards = document.querySelectorAll(".events__item");
+    var allEventCards = document.querySelectorAll(".openEvent");
     var allEventModals = document.querySelectorAll(".event-popup");
     allEventCards.forEach(function (card) {
       card.addEventListener("click", function () {
@@ -485,6 +485,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     });
+  } // opening report popup settings 
+
+  {
+    var _allEventCards2 = document.querySelectorAll(".event-report__item");
+
+    var _allEventModals2 = document.querySelectorAll(".report-popup");
+
+    _allEventCards2.forEach(function (card) {
+      card.addEventListener("click", function () {
+        var eventNum = card.getAttribute("data-report");
+
+        _allEventModals2.forEach(function (modal) {
+          var modalNum = modal.id;
+
+          if (eventNum === modalNum) {
+            modal.classList.add("show");
+            body.classList.add("disabled");
+          }
+        });
+      });
+    });
   } // write to founder modal window 
 
   {
@@ -514,7 +535,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } // fix socials buttons 
 
   {
-    if (window.innerWidth >= 1650) {
+    if (window.innerWidth >= 1350) {
       var socials = document.querySelector(".main-screen-socials");
       var socialsTopPos = socials.clientHeight;
       window.addEventListener("scroll", function (e) {
@@ -537,5 +558,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var scrollbarWidth = calcScrollbarWidth();
     document.body.style.paddingRight = scrollbarWidth + 'px';
+  }
+  {
+    var allGallery = document.querySelectorAll(".lightGallery");
+    console.log(allGallery);
+    allGallery.forEach(function (gallery) {
+      lightGallery(gallery);
+    });
   }
 });
