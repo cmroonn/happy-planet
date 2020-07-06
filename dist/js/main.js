@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === popup) {
           popup.classList.remove("show");
           body.classList.remove("disabled");
+          body.style.paddingRight = 0;
         }
       });
       document.addEventListener("keydown", function (e) {
         if (e.keyCode === 27) {
           popup.classList.remove("show");
           body.classList.remove("disabled");
+          body.style.paddingRight = 0;
         }
       });
     });
@@ -23,9 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
       el.addEventListener("click", function () {
         el.closest(".popup-wrapper").classList.remove("show");
         body.classList.remove("disabled");
+        body.style.paddingRight = 0;
       });
     });
-  }; // Carousel Settings
+  }; // hide scroll bar
+
+
+  function calcScrollbarWidth() {
+    var documentWidth = parseInt(document.documentElement.clientWidth),
+        windowWidth = parseInt(window.innerWidth),
+        scrollbarWidth = windowWidth - documentWidth;
+    return scrollbarWidth;
+  } // Carousel Settings
 
 
   {
@@ -248,9 +259,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (window.innerWidth < 1170) {
       var eventPopupCarousel = new Swiper(".event-photos", {
-        centeredSlides: true,
+        slidesPerView: 1,
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true
         }
       });
@@ -357,6 +368,8 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", function (e) {
         popup.classList.add("show");
         body.classList.add("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     });
 
@@ -376,6 +389,8 @@ document.addEventListener("DOMContentLoaded", function () {
         _popup.classList.add("show");
 
         body.classList.add("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     });
   } // Popup with privacy policy settings
@@ -390,6 +405,8 @@ document.addEventListener("DOMContentLoaded", function () {
         _popup2.classList.add("show");
 
         body.classList.add("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     });
   } // Close popup
@@ -429,6 +446,8 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", function () {
         menu.classList.toggle("active");
         body.classList.toggle("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     });
   } // Map on heroes page settings 
@@ -457,6 +476,8 @@ document.addEventListener("DOMContentLoaded", function () {
           if (eventNum === modalNum) {
             modal.classList.add("show");
             body.classList.add("disabled");
+            var scrollbarWidth = calcScrollbarWidth();
+            body.style.paddingRight = scrollbarWidth + 'px';
           }
         });
       });
@@ -480,6 +501,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (eventNum === modalNum) {
               modal.classList.add("show");
               body.classList.add("disabled");
+              var scrollbarWidth = calcScrollbarWidth();
+              body.style.paddingRight = scrollbarWidth + 'px';
             }
           });
         });
@@ -493,17 +516,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var _allEventModals2 = document.querySelectorAll(".report-popup");
 
     _allEventCards2.forEach(function (card) {
-      card.addEventListener("click", function () {
+      card.addEventListener("click", function (e) {
         var eventNum = card.getAttribute("data-report");
 
-        _allEventModals2.forEach(function (modal) {
-          var modalNum = modal.id;
+        if (!e.target.classList.contains("category-square")) {
+          _allEventModals2.forEach(function (modal) {
+            var modalNum = modal.id;
 
-          if (eventNum === modalNum) {
-            modal.classList.add("show");
-            body.classList.add("disabled");
-          }
-        });
+            if (eventNum === modalNum) {
+              modal.classList.add("show");
+              body.classList.add("disabled");
+              var scrollbarWidth = calcScrollbarWidth();
+              body.style.paddingRight = scrollbarWidth + 'px';
+            }
+          });
+        }
       });
     });
   } // write to founder modal window 
@@ -516,6 +543,8 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.addEventListener("click", function (e) {
         modal.classList.add("show");
         body.classList.add("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     }
   } // get consult modal window 
@@ -530,6 +559,8 @@ document.addEventListener("DOMContentLoaded", function () {
         _modal.classList.add("show");
 
         body.classList.add("disabled");
+        var scrollbarWidth = calcScrollbarWidth();
+        body.style.paddingRight = scrollbarWidth + 'px';
       });
     }
   } // fix socials buttons 
@@ -546,18 +577,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-  } // Hide scrollbar
-
-  {
-    var calcScrollbarWidth = function calcScrollbarWidth() {
-      var documentWidth = parseInt(document.documentElement.clientWidth),
-          windowWidth = parseInt(window.innerWidth),
-          scrollbarWidth = windowWidth - documentWidth;
-      return scrollbarWidth;
-    };
-
-    var scrollbarWidth = calcScrollbarWidth();
-    document.body.style.paddingRight = scrollbarWidth + 'px';
   }
   {
     var allGallery = document.querySelectorAll(".lightGallery");

@@ -215,7 +215,8 @@ h2 {
   width: 28px;
   height: 25px;
   border-radius: 5px;
-  position: relative; }
+  position: relative;
+  display: block; }
   .category-square.violet-square {
     background: #660066; }
   .category-square.turquoise-square {
@@ -353,7 +354,7 @@ h2 {
 .subpage-main-screen {
   padding-top: 53%;
   background: url("../img/page-bg.png") no-repeat;
-  height: 140vw;
+  height: 120vw;
   background-size: 100%;
   position: relative; }
   .subpage-main-screen .main-screen-socials {
@@ -851,7 +852,7 @@ h2 {
 .raising-money__carousel {
   max-width: 300px;
   margin: auto;
-  height: 350px;
+  height: 370px;
   padding-top: 40px;
   overflow-y: visible; }
   .raising-money__carousel .slick-slide.slick-active .raising-money__item-content {
@@ -1338,9 +1339,9 @@ h2 {
     border-radius: 2px; }
 
 .contacts {
-  margin-top: 70px; }
+  margin-top: 120px; }
   .contacts h2 {
-    margin-bottom: 20px; }
+    margin-bottom: 40px; }
 
 .contacts__content-block {
   display: -webkit-box;
@@ -2112,7 +2113,8 @@ h2 {
   -ms-flex-pack: center;
   justify-content: center; }
   .event-photos__item img {
-    border-radius: 35px; }
+    border-radius: 35px;
+    width: 100%; }
 
 .event-signup {
   background: #f6f6f6;
@@ -2639,6 +2641,11 @@ h2 {
     font-size: 18px; }
     .be-hero__top__cities li:last-child {
       margin-right: 0; }
+    .be-hero__top__cities li span {
+      opacity: .75; }
+    .be-hero__top__cities li input:checked + span {
+      opacity: 1;
+      font-weight: 600; }
 
 .be-hero__content {
   position: relative;

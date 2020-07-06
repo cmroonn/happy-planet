@@ -336,6 +336,8 @@
     height: 200px;
     width: 1130px;
     margin: auto; }
+  .about-page__gallery {
+    padding-bottom: 0; }
   .events__item {
     margin-right: 3px; }
     .events__item:last-child {
@@ -1047,7 +1049,7 @@
     width: 300px;
     top: -82px;
     left: -15px; }
-  .about-page__founder {
+  .about-project__founder-desc {
     display: none; }
   .about-project__founder-mob {
     display: block;
