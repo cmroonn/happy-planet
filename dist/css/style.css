@@ -2359,6 +2359,9 @@ h2 {
 .main.turquoise .hero-way__btn {
   background: #339999; }
 
+.main.turquoise .hero-way .decor-figure path {
+  fill: #339999; }
+
 .main.aqua .video-icon {
   background: rgba(120, 184, 247, 0.5); }
 
@@ -2376,6 +2379,9 @@ h2 {
 .main.aqua .be-hero__content-pdf__get,
 .main.aqua .hero-way__btn {
   background: #78b8f7; }
+
+.main.aqua .hero-way .decor-figure path {
+  fill: #78b8f7; }
 
 .main.violet .video-icon {
   background: rgba(122, 66, 167, 0.5); }
@@ -2395,6 +2401,9 @@ h2 {
 .main.violet .hero-way__btn {
   background: #7a42a7; }
 
+.main.violet .hero-way .decor-figure path {
+  fill: #7a42a7; }
+
 .main.green .video-icon {
   background: rgba(102, 204, 102, 0.5); }
 
@@ -2413,6 +2422,9 @@ h2 {
 .main.green .hero-way__btn {
   background: #66cc66; }
 
+.main.green .hero-way .decor-figure path {
+  fill: #66cc66; }
+
 .main.beige .video-icon {
   background: rgba(255, 204, 153, 0.5); }
 
@@ -2430,6 +2442,9 @@ h2 {
 .main.beige .be-hero__content-pdf__get,
 .main.beige .hero-way__btn {
   background: #ffcc99; }
+
+.main.beige .hero-way .decor-figure path {
+  fill: #ffcc99; }
 
 .project-main-screen {
   background: url("../img/bg-project.jpg") no-repeat;
@@ -2720,7 +2735,8 @@ h2 {
   margin-bottom: 100px; }
   .hero-way h2 {
     margin-bottom: 50px; }
-  .hero-way .dotted-rect {
+  .hero-way .dotted-rect,
+  .hero-way .decor-figure {
     display: none; }
 
 @media screen and (min-width: 1650px) {
@@ -2728,7 +2744,12 @@ h2 {
     position: absolute;
     display: block;
     left: 0;
-    bottom: -50px; } }
+    bottom: -50px; }
+  .hero-way .decor-figure {
+    right: 0;
+    position: absolute;
+    top: -150px;
+    display: block; } }
 
 .hero-way__content {
   display: -webkit-box;
