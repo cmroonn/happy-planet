@@ -260,6 +260,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth < 1170) {
       var eventPopupCarousel = new Swiper(".event-photos", {
         slidesPerView: 1,
+        width: 280,
+        spaceBetween: 30,
+        centeredSlides: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
