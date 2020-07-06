@@ -2715,8 +2715,20 @@ h2 {
     -o-transition: .2s;
     transition: .2s; }
 
-.hero-way h2 {
-  margin-bottom: 50px; }
+.hero-way {
+  position: relative;
+  margin-bottom: 100px; }
+  .hero-way h2 {
+    margin-bottom: 50px; }
+  .hero-way .dotted-rect {
+    display: none; }
+
+@media screen and (min-width: 1650px) {
+  .hero-way .dotted-rect {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -50px; } }
 
 .hero-way__content {
   display: -webkit-box;
@@ -2830,9 +2842,17 @@ h2 {
 .about-project_decoration-text {
   display: none; }
 
+.about-project .dotted-rect {
+  display: none; }
+
 @media screen and (min-width: 1650px) {
   .about-project {
     position: relative; }
+    .about-project .dotted-rect {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -150px; }
   .about-project_decoration-text {
     display: block;
     position: absolute;
@@ -2844,7 +2864,7 @@ h2 {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     font-weight: bold;
-    top: 1030px;
+    top: 650px;
     left: -720px; } }
 
 .about-project__founder-mob {
