@@ -355,7 +355,8 @@
   .event-report__item {
     margin: auto; }
   .event-photos {
-    padding: 0 15px; }
+    padding: 0 15px;
+    max-width: unset; }
     .event-photos .swiper-wrapper {
       max-width: 100%;
       -webkit-flex-wrap: wrap;
