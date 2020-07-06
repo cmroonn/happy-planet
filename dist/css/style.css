@@ -2103,6 +2103,8 @@ h2 {
   padding-bottom: 30px;
   margin: 30px auto 10px;
   max-width: 280px; }
+  .event-photos .carousel-dots {
+    bottom: 0; }
 
 .event-photos__item {
   display: -webkit-box;
